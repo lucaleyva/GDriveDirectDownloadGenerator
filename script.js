@@ -23,7 +23,10 @@ function generateLink(e) {
         alert('Please generate a Download Link');
       } else {
         navigator.clipboard.writeText(target.value).then(() => {
-          alert('Link has been copied to clipboard');
+          copy.textContent = 'Copied!!!';
+          setTimeout(() => {
+            copy.textContent = 'Copy';
+          }, 3000);
         });
       }
     }
